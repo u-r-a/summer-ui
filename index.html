@@ -11,63 +11,48 @@
 <body>
   <main class="wrap">
     <header class="hero">
-      <div class="badge">summer pui</div>
       <h1>Summer<span class="dot">.</span></h1>
-      <p class="tagline">Summer Personal User Interface — a calm home for the things you care about.</p>
     </header>
 
-    <section class="cards" aria-label="Quick links">
-      <a class="card" href="#" data-label="Notes">
-        <span class="card__icon">✺</span>
-        <span class="card__title">Notes</span>
-        <span class="card__sub">Capture a thought</span>
-      </a>
-      <a class="card" href="#" data-label="Links">
-        <span class="card__icon">↗</span>
-        <span class="card__title">Links</span>
-        <span class="card__sub">Your shortcuts</span>
-      </a>
-      <a class="card" href="#" data-label="Today">
-        <span class="card__icon">◴</span>
-        <span class="card__title">Today</span>
-        <span class="card__sub" id="clock">—</span>
-      </a>
+    <!-- Locked state: only the title (above) and the sign-in button are shown -->
+    <section id="gate-locked" class="signin" aria-label="Sign in">
+      <div id="gsi-button"></div>
+      <p class="gate__note" id="gate-note"></p>
     </section>
 
-    <section class="gate" aria-label="Private entry">
-      <div class="gate__head">
-        <span class="gate__icon" id="gate-icon">🔒</span>
+    <!-- Unlocked state: the personal UI, visible only after sign-in -->
+    <div id="gate-unlocked" hidden>
+      <div class="gate__who">
+        <img id="gate-avatar" class="gate__avatar" alt="" width="40" height="40" />
         <div>
-          <h2 class="gate__title">Private</h2>
-          <p class="gate__sub" id="gate-status">Sign in with Google to unlock this entry.</p>
-        </div>
-      </div>
-
-      <!-- Locked state -->
-      <div id="gate-locked">
-        <div id="gsi-button"></div>
-        <p class="gate__note" id="gate-note"></p>
-      </div>
-
-      <!-- Unlocked state -->
-      <div id="gate-unlocked" hidden>
-        <div class="gate__who">
-          <img id="gate-avatar" class="gate__avatar" alt="" width="40" height="40" />
-          <div>
-            <strong id="gate-name"></strong>
-            <span class="gate__email" id="gate-email"></span>
-          </div>
-        </div>
-        <div class="gate__content">
-          <p>🌻 Welcome in. This entry is only visible once you're signed in.</p>
+          <strong id="gate-name"></strong>
+          <span class="gate__email" id="gate-email"></span>
         </div>
         <button class="gate__signout" id="gate-signout" type="button">Sign out</button>
       </div>
-    </section>
 
-    <footer class="foot">
-      <span>Built with ♥ for summer.</span>
-    </footer>
+      <section class="cards" aria-label="Quick links">
+        <a class="card" href="#" data-label="Notes">
+          <span class="card__icon">✺</span>
+          <span class="card__title">Notes</span>
+          <span class="card__sub">Capture a thought</span>
+        </a>
+        <a class="card" href="#" data-label="Links">
+          <span class="card__icon">↗</span>
+          <span class="card__title">Links</span>
+          <span class="card__sub">Your shortcuts</span>
+        </a>
+        <a class="card" href="#" data-label="Today">
+          <span class="card__icon">◴</span>
+          <span class="card__title">Today</span>
+          <span class="card__sub" id="clock">—</span>
+        </a>
+      </section>
+
+      <footer class="foot">
+        <span>Built with ♥ for summer.</span>
+      </footer>
+    </div>
   </main>
 
   <script src="app.js"></script>
