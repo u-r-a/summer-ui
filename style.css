@@ -57,6 +57,12 @@ h1 {
   letter-spacing: -0.03em;
 }
 
+.subheading {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: -10px; /* Adjusts spacing between title and subtitle */
+}
+
 .dot { color: var(--accent); }
 
 .tagline {
