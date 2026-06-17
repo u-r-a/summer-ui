@@ -6,6 +6,7 @@
   <title>Summer · Personal User Interface</title>
   <meta name="description" content="Summer PUI — a personal user interface." />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
   <main class="wrap">
@@ -31,6 +32,37 @@
         <span class="card__title">Today</span>
         <span class="card__sub" id="clock">—</span>
       </a>
+    </section>
+
+    <section class="gate" aria-label="Private entry">
+      <div class="gate__head">
+        <span class="gate__icon" id="gate-icon">🔒</span>
+        <div>
+          <h2 class="gate__title">Private</h2>
+          <p class="gate__sub" id="gate-status">Sign in with Google to unlock this entry.</p>
+        </div>
+      </div>
+
+      <!-- Locked state -->
+      <div id="gate-locked">
+        <div id="gsi-button"></div>
+        <p class="gate__note" id="gate-note"></p>
+      </div>
+
+      <!-- Unlocked state -->
+      <div id="gate-unlocked" hidden>
+        <div class="gate__who">
+          <img id="gate-avatar" class="gate__avatar" alt="" width="40" height="40" />
+          <div>
+            <strong id="gate-name"></strong>
+            <span class="gate__email" id="gate-email"></span>
+          </div>
+        </div>
+        <div class="gate__content">
+          <p>🌻 Welcome in. This entry is only visible once you're signed in.</p>
+        </div>
+        <button class="gate__signout" id="gate-signout" type="button">Sign out</button>
+      </div>
     </section>
 
     <footer class="foot">
