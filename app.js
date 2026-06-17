@@ -11,7 +11,7 @@ setInterval(tick, 1000 * 30);
 // ---- Gmail / Google sign-in gate ----
 // Replace with your own OAuth Client ID from Google Cloud Console.
 // (APIs & Services -> Credentials -> OAuth client ID -> Web application)
-const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "906540452923-r0tulsk0cqr9oikdmcj44o4b47o0hm0g.apps.googleusercontent.com";
 const SESSION_KEY = "summerpui_user";
 
 function decodeJwt(token) {
