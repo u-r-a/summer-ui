@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer · Personal User Interface</title>
+  <meta name="description" content="Summer PUI — a personal user interface." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="badge">summer pui</div>
+      <h1>Summer<span class="dot">.</span></h1>
+      <p class="tagline">Summer Personal User Interface — a calm home for the things you care about.</p>
+    </header>
+
+    <section class="cards" aria-label="Quick links">
+      <a class="card" href="#" data-label="Notes">
+        <span class="card__icon">✺</span>
+        <span class="card__title">Notes</span>
+        <span class="card__sub">Capture a thought</span>
+      </a>
+      <a class="card" href="#" data-label="Links">
+        <span class="card__icon">↗</span>
+        <span class="card__title">Links</span>
+        <span class="card__sub">Your shortcuts</span>
+      </a>
+      <a class="card" href="#" data-label="Today">
+        <span class="card__icon">◴</span>
+        <span class="card__title">Today</span>
+        <span class="card__sub" id="clock">—</span>
+      </a>
+    </section>
+
+    <footer class="foot">
+      <span>Built with ♥ for summer.</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
